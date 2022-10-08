@@ -13,11 +13,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.Measurable
 import androidx.compose.ui.layout.Placeable
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import com.tushar.textmessagecomposable.ui.theme.BubbleColor
+import com.tushar.textmessagecomposable.ui.utils.drawBubbleCorner
 
 @Composable
 fun TextMessage(
@@ -141,6 +143,13 @@ fun Preview_1_TextMessage() {
             horizontalAlignment = Alignment.End,
             modifier = Modifier
                 .wrapContentSize()
+                .drawBubbleCorner(
+                    bubbleColor = BubbleColor,
+                    cornerShape = with(LocalDensity.current) { 16.dp.toPx() },
+                    arrowWidth = with(LocalDensity.current) { 8.dp.toPx() },
+                    arrowHeight = with(LocalDensity.current) { 12.dp.toPx() },
+                    shouldDrawArrow = true
+                )
                 .clip(RoundedCornerShape(10.dp))
                 .background(BubbleColor)
         ) {
@@ -163,6 +172,13 @@ fun Preview_2_TextMessage() {
             horizontalAlignment = Alignment.End,
             modifier = Modifier
                 .wrapContentSize()
+                .drawBubbleCorner(
+                    bubbleColor = BubbleColor,
+                    cornerShape = with(LocalDensity.current) { 16.dp.toPx() },
+                    arrowWidth = with(LocalDensity.current) { 8.dp.toPx() },
+                    arrowHeight = with(LocalDensity.current) { 12.dp.toPx() },
+                    shouldDrawArrow = true
+                )
                 .clip(RoundedCornerShape(10.dp))
                 .background(BubbleColor)
         ) {
@@ -185,6 +201,13 @@ fun Preview_3_TextMessage() {
             horizontalAlignment = Alignment.End,
             modifier = Modifier
                 .wrapContentSize()
+                .drawBubbleCorner(
+                    bubbleColor = BubbleColor,
+                    cornerShape = with(LocalDensity.current) { 16.dp.toPx() },
+                    arrowWidth = with(LocalDensity.current) { 8.dp.toPx() },
+                    arrowHeight = with(LocalDensity.current) { 12.dp.toPx() },
+                    shouldDrawArrow = true
+                )
                 .clip(RoundedCornerShape(10.dp))
                 .background(BubbleColor)
         ) {
@@ -207,6 +230,13 @@ fun Preview_4_TextMessage() {
             horizontalAlignment = Alignment.End,
             modifier = Modifier
                 .wrapContentSize()
+                .drawBubbleCorner(
+                    bubbleColor = BubbleColor,
+                    cornerShape = with(LocalDensity.current) { 16.dp.toPx() },
+                    arrowWidth = with(LocalDensity.current) { 8.dp.toPx() },
+                    arrowHeight = with(LocalDensity.current) { 12.dp.toPx() },
+                    shouldDrawArrow = true
+                )
                 .clip(RoundedCornerShape(10.dp))
                 .background(BubbleColor)
         ) {
